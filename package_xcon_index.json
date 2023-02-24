@@ -12,6 +12,54 @@
           {
             "name": "OhStem Boards",
             "architecture": "esp32",
+            "version": "2.0.2",
+            "category": "ESP32",
+            "url": "https://github.com/AITT-VN/ohstem_arduino_board/releases/download/v2.0.2/ohstem_esp32-2.0.2.zip",
+            "archiveFileName": "ohstem_esp32-2.0.2.zip",
+            "checksum": "SHA-256:d0404e5513139148754e929f3353f179f528f76b2ca7b96e48db5706d58cc075",
+            "size": "146240700",
+            "help": {
+              "online": "https://github.com/AITT-VN/ohstem_arduino_board"
+            },
+            "boards": [
+              {
+                "name": "YoloBit"
+              },
+              {
+                "name": "xController"
+              }
+            ],
+            "toolsDependencies": [
+              {
+                "packager": "OhStem",
+                "name": "xtensa-esp32-elf-gcc",
+                "version": "gcc8_4_0-esp-2021r2"
+              },
+              {
+                "packager": "OhStem",
+                "name": "xtensa-esp32s2-elf-gcc",
+                "version": "gcc8_4_0-esp-2021r2"
+              },
+              {
+                "packager": "OhStem",
+                "name": "esptool_py",
+                "version": "3.1.0"
+              },
+              {
+                "packager": "OhStem",
+                "name": "mkspiffs",
+                "version": "0.2.3"
+              },
+              {
+                "packager": "OhStem",
+                "name": "mklittlefs",
+                "version": "3.0.0-gnu12-dc7f933"
+              }
+            ]
+          },
+          {
+            "name": "OhStem Boards",
+            "architecture": "esp32",
             "version": "2.0.1",
             "category": "ESP32",
             "url": "https://github.com/AITT-VN/ohstem_arduino_board/releases/download/v2.0.1/ohstem_esp32-2.0.1.zip",
