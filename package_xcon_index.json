@@ -3,7 +3,7 @@
       {
         "name": "OhStem",
         "maintainer": "OhStem Education",
-        "websiteURL": "https://github.com/AITT-VN",
+        "websiteURL": "https://github.com/AITT-VN/ohstem_arduino_board",
         "email": "vanminh0910@gmail.com",
         "help": {
           "online": "https://github.com/AITT-VN/ohstem_arduino_board"
@@ -88,11 +88,6 @@
 				  "name": "mklittlefs",
 				  "version": "3.0.0-gnu12-dc7f933"
 				},
-				{
-				  "packager": "OhStem",
-				  "name": "dfu-util",
-				  "version": "0.11.0-arduino5"
-				}
 			]
           },
           {
