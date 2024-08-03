@@ -16,7 +16,7 @@
                "category":"ESP32",
                "url":"https://github.com/AITT-VN/ohstem_arduino_board/releases/download/v3.0.4/ohstem_esp32-3.0.4.zip",
                "archiveFileName":"ohstem_esp32-3.0.4.zip",
-               "checksum":"SHA-256:d4af680860c61c7184ea1739b988343c2e93a27511eb5fcccf025d5551dcebfb",
+               "checksum":"SHA-256:c9502c54295169d8fd842e18fcd7ef6871794d07fb71c183561bd8e8055a23d6",
                "size":"19910637",
                "help":{
                   "online":"https://github.com/AITT-VN/ohstem_arduino_board"

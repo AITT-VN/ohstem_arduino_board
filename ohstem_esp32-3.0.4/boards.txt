@@ -71,7 +71,7 @@ yolo_uno.build.target=esp32s3
 yolo_uno.build.mcu=esp32s3
 yolo_uno.build.core=esp32
 yolo_uno.build.variant=yolo_uno
-yolo_uno.build.board=YOLO UNO
+yolo_uno.build.board=YOLO_UNO
 
 yolo_uno.build.usb_mode=1
 yolo_uno.build.cdc_on_boot=0
