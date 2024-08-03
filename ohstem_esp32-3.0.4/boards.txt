@@ -34,13 +34,13 @@ menu.NetworkLogLevel=Network Log Level
 ##############################################################
 
 # Generic definition to be used for USB discovery of CDC/JTAG
-esp32_family.name=ESP32 Family Device
+esp32_family.name=OhStem Boards
 esp32_family.hide=true
 esp32_family.vid.0=0x303a
 esp32_family.pid.0=0x1001
 esp32_family.upload_port.0.vid=0x303a
 esp32_family.upload_port.0.pid=0x1001
-esp32_family.build.board=ESP32_FAMILY
+esp32_family.build.board=OhStem Boards
 
 ##############################################################
 
@@ -70,8 +70,8 @@ yolo_uno.build.bootloader_addr=0x0
 yolo_uno.build.target=esp32s3
 yolo_uno.build.mcu=esp32s3
 yolo_uno.build.core=esp32
-yolo_uno.build.variant=esp32s3
-yolo_uno.build.board=ESP32S3_DEV
+yolo_uno.build.variant=yolo_uno
+yolo_uno.build.board=YOLO UNO
 
 yolo_uno.build.usb_mode=1
 yolo_uno.build.cdc_on_boot=0
@@ -321,8 +321,8 @@ yolobit.build.bootloader_addr=0x1000
 yolobit.build.target=esp32
 yolobit.build.mcu=esp32
 yolobit.build.core=esp32
-yolobit.build.variant=esp32
-yolobit.build.board=ESP32_DEV
+yolobit.build.variant=yolobit
+yolobit.build.board=YOLOBIT
 
 yolobit.build.f_cpu=240000000L
 yolobit.build.flash_size=4MB
@@ -442,8 +442,8 @@ xcontroller.build.bootloader_addr=0x1000
 xcontroller.build.target=esp32
 xcontroller.build.mcu=esp32
 xcontroller.build.core=esp32
-xcontroller.build.variant=esp32
-xcontroller.build.board=ESP32_DEV
+xcontroller.build.variant=xcontroller
+xcontroller.build.board=XCONTROLLER
 
 xcontroller.build.f_cpu=240000000L
 xcontroller.build.flash_size=4MB
