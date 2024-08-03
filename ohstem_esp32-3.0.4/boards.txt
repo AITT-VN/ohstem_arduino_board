@@ -1,0 +1,543 @@
+# Official Espressif options
+menu.UploadSpeed=Upload Speed
+menu.USBMode=USB Mode
+menu.CDCOnBoot=USB CDC On Boot
+menu.MSCOnBoot=USB Firmware MSC On Boot
+menu.DFUOnBoot=USB DFU On Boot
+menu.UploadMode=Upload Mode
+menu.CPUFreq=CPU Frequency
+menu.FlashFreq=Flash Frequency
+menu.FlashMode=Flash Mode
+menu.FlashSize=Flash Size
+menu.PartitionScheme=Partition Scheme
+menu.DebugLevel=Core Debug Level
+menu.PSRAM=PSRAM
+menu.LoopCore=Arduino Runs On
+menu.EventsCore=Events Run On
+menu.MemoryType=Memory Type
+menu.EraseFlash=Erase All Flash Before Sketch Upload
+menu.JTAGAdapter=JTAG Adapter
+menu.ZigbeeMode=Zigbee Mode
+menu.PinNumbers=Pin Numbering
+
+# Custom options
+menu.Revision=Board Revision
+menu.LORAWAN_REGION=LoRaWan Region
+menu.LoRaWanDebugLevel=LoRaWan Debug Level
+menu.LORAWAN_DEVEUI=LoRaWan DevEUI
+menu.LORAWAN_PREAMBLE_LENGTH=LoRaWan Preamble Length
+menu.SLOW_CLK_TPYE=Slow Clk Type(only for LoRaWAN)
+menu.einksize=E-Ink Display Size
+menu.NetworkLogLevel=Network Log Level
+##############################################################
+### DO NOT PUT BOARDS ABOVE THE OFFICIAL ESPRESSIF BOARDS! ###
+##############################################################
+
+# Generic definition to be used for USB discovery of CDC/JTAG
+esp32_family.name=ESP32 Family Device
+esp32_family.hide=true
+esp32_family.vid.0=0x303a
+esp32_family.pid.0=0x1001
+esp32_family.upload_port.0.vid=0x303a
+esp32_family.upload_port.0.pid=0x1001
+esp32_family.build.board=ESP32_FAMILY
+
+##############################################################
+
+yolo_uno.name=Yolo UNO (ESP32-S3)
+yolo_uno.vid.0=0x303a
+yolo_uno.pid.0=0x1001
+
+yolo_uno.bootloader.tool=esptool_py
+yolo_uno.bootloader.tool.default=esptool_py
+
+yolo_uno.upload.tool=esptool_py
+yolo_uno.upload.tool.default=esptool_py
+yolo_uno.upload.tool.network=esp_ota
+
+yolo_uno.upload.maximum_size=1310720
+yolo_uno.upload.maximum_data_size=327680
+yolo_uno.upload.flags=
+yolo_uno.upload.extra_flags=
+yolo_uno.upload.use_1200bps_touch=false
+yolo_uno.upload.wait_for_upload_port=false
+
+yolo_uno.serial.disableDTR=false
+yolo_uno.serial.disableRTS=false
+
+yolo_uno.build.tarch=xtensa
+yolo_uno.build.bootloader_addr=0x0
+yolo_uno.build.target=esp32s3
+yolo_uno.build.mcu=esp32s3
+yolo_uno.build.core=esp32
+yolo_uno.build.variant=esp32s3
+yolo_uno.build.board=ESP32S3_DEV
+
+yolo_uno.build.usb_mode=1
+yolo_uno.build.cdc_on_boot=0
+yolo_uno.build.msc_on_boot=0
+yolo_uno.build.dfu_on_boot=0
+yolo_uno.build.f_cpu=240000000L
+yolo_uno.build.flash_size=4MB
+yolo_uno.build.flash_freq=80m
+yolo_uno.build.flash_mode=dio
+yolo_uno.build.boot=qio
+yolo_uno.build.boot_freq=80m
+yolo_uno.build.partitions=default
+yolo_uno.build.defines=
+yolo_uno.build.loop_core=
+yolo_uno.build.event_core=
+yolo_uno.build.psram_type=qspi
+yolo_uno.build.memory_type={build.boot}_{build.psram_type}
+
+## IDE 2.0 Seems to not update the value
+yolo_uno.menu.JTAGAdapter.default=Disabled
+yolo_uno.menu.JTAGAdapter.default.build.copy_jtag_files=0
+yolo_uno.menu.JTAGAdapter.builtin=Integrated USB JTAG
+yolo_uno.menu.JTAGAdapter.builtin.build.openocdscript=esp32s3-builtin.cfg
+yolo_uno.menu.JTAGAdapter.builtin.build.copy_jtag_files=1
+yolo_uno.menu.JTAGAdapter.external=FTDI Adapter
+yolo_uno.menu.JTAGAdapter.external.build.openocdscript=esp32s3-ftdi.cfg
+yolo_uno.menu.JTAGAdapter.external.build.copy_jtag_files=1
+yolo_uno.menu.JTAGAdapter.bridge=ESP USB Bridge
+yolo_uno.menu.JTAGAdapter.bridge.build.openocdscript=esp32s3-bridge.cfg
+yolo_uno.menu.JTAGAdapter.bridge.build.copy_jtag_files=1
+
+yolo_uno.menu.PSRAM.disabled=Disabled
+yolo_uno.menu.PSRAM.disabled.build.defines=
+yolo_uno.menu.PSRAM.disabled.build.psram_type=qspi
+yolo_uno.menu.PSRAM.enabled=QSPI PSRAM
+yolo_uno.menu.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM
+yolo_uno.menu.PSRAM.enabled.build.psram_type=qspi
+yolo_uno.menu.PSRAM.opi=OPI PSRAM
+yolo_uno.menu.PSRAM.opi.build.defines=-DBOARD_HAS_PSRAM
+yolo_uno.menu.PSRAM.opi.build.psram_type=opi
+
+yolo_uno.menu.FlashMode.qio=QIO 80MHz
+yolo_uno.menu.FlashMode.qio.build.flash_mode=dio
+yolo_uno.menu.FlashMode.qio.build.boot=qio
+yolo_uno.menu.FlashMode.qio.build.boot_freq=80m
+yolo_uno.menu.FlashMode.qio.build.flash_freq=80m
+yolo_uno.menu.FlashMode.qio120=QIO 120MHz
+yolo_uno.menu.FlashMode.qio120.build.flash_mode=dio
+yolo_uno.menu.FlashMode.qio120.build.boot=qio
+yolo_uno.menu.FlashMode.qio120.build.boot_freq=120m
+yolo_uno.menu.FlashMode.qio120.build.flash_freq=80m
+yolo_uno.menu.FlashMode.dio=DIO 80MHz
+yolo_uno.menu.FlashMode.dio.build.flash_mode=dio
+yolo_uno.menu.FlashMode.dio.build.boot=dio
+yolo_uno.menu.FlashMode.dio.build.boot_freq=80m
+yolo_uno.menu.FlashMode.dio.build.flash_freq=80m
+yolo_uno.menu.FlashMode.opi=OPI 80MHz
+yolo_uno.menu.FlashMode.opi.build.flash_mode=dout
+yolo_uno.menu.FlashMode.opi.build.boot=opi
+yolo_uno.menu.FlashMode.opi.build.boot_freq=80m
+yolo_uno.menu.FlashMode.opi.build.flash_freq=80m
+
+yolo_uno.menu.FlashSize.4M=4MB (32Mb)
+yolo_uno.menu.FlashSize.4M.build.flash_size=4MB
+yolo_uno.menu.FlashSize.8M=8MB (64Mb)
+yolo_uno.menu.FlashSize.8M.build.flash_size=8MB
+yolo_uno.menu.FlashSize.8M.build.partitions=default_8MB
+yolo_uno.menu.FlashSize.16M=16MB (128Mb)
+yolo_uno.menu.FlashSize.16M.build.flash_size=16MB
+yolo_uno.menu.FlashSize.32M=32MB (256Mb)
+yolo_uno.menu.FlashSize.32M.build.flash_size=32MB
+yolo_uno.menu.FlashSize.32M.build.partitions=app5M_fat24M_32MB
+
+yolo_uno.menu.LoopCore.1=Core 1
+yolo_uno.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+yolo_uno.menu.LoopCore.0=Core 0
+yolo_uno.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+yolo_uno.menu.EventsCore.1=Core 1
+yolo_uno.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+yolo_uno.menu.EventsCore.0=Core 0
+yolo_uno.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
+
+yolo_uno.menu.USBMode.hwcdc=Hardware CDC and JTAG
+yolo_uno.menu.USBMode.hwcdc.build.usb_mode=1
+yolo_uno.menu.USBMode.default=USB-OTG (TinyUSB)
+yolo_uno.menu.USBMode.default.build.usb_mode=0
+
+yolo_uno.menu.CDCOnBoot.default=Disabled
+yolo_uno.menu.CDCOnBoot.default.build.cdc_on_boot=0
+yolo_uno.menu.CDCOnBoot.cdc=Enabled
+yolo_uno.menu.CDCOnBoot.cdc.build.cdc_on_boot=1
+
+yolo_uno.menu.MSCOnBoot.default=Disabled
+yolo_uno.menu.MSCOnBoot.default.build.msc_on_boot=0
+yolo_uno.menu.MSCOnBoot.msc=Enabled (Requires USB-OTG Mode)
+yolo_uno.menu.MSCOnBoot.msc.build.msc_on_boot=1
+
+yolo_uno.menu.DFUOnBoot.default=Disabled
+yolo_uno.menu.DFUOnBoot.default.build.dfu_on_boot=0
+yolo_uno.menu.DFUOnBoot.dfu=Enabled (Requires USB-OTG Mode)
+yolo_uno.menu.DFUOnBoot.dfu.build.dfu_on_boot=1
+
+yolo_uno.menu.UploadMode.default=UART0 / Hardware CDC
+yolo_uno.menu.UploadMode.default.upload.use_1200bps_touch=false
+yolo_uno.menu.UploadMode.default.upload.wait_for_upload_port=false
+yolo_uno.menu.UploadMode.cdc=USB-OTG CDC (TinyUSB)
+yolo_uno.menu.UploadMode.cdc.upload.use_1200bps_touch=true
+yolo_uno.menu.UploadMode.cdc.upload.wait_for_upload_port=true
+
+yolo_uno.menu.PartitionScheme.default=Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
+yolo_uno.menu.PartitionScheme.default.build.partitions=default
+yolo_uno.menu.PartitionScheme.defaultffat=Default 4MB with ffat (1.2MB APP/1.5MB FATFS)
+yolo_uno.menu.PartitionScheme.defaultffat.build.partitions=default_ffat
+yolo_uno.menu.PartitionScheme.default_8MB=8M with spiffs (3MB APP/1.5MB SPIFFS)
+yolo_uno.menu.PartitionScheme.default_8MB.build.partitions=default_8MB
+yolo_uno.menu.PartitionScheme.default_8MB.upload.maximum_size=3342336
+yolo_uno.menu.PartitionScheme.minimal=Minimal (1.3MB APP/700KB SPIFFS)
+yolo_uno.menu.PartitionScheme.minimal.build.partitions=minimal
+yolo_uno.menu.PartitionScheme.no_fs=No FS 4MB (2MB APP x2)
+yolo_uno.menu.PartitionScheme.no_fs.build.partitions=no_fs
+yolo_uno.menu.PartitionScheme.no_fs.upload.maximum_size=2031616
+yolo_uno.menu.PartitionScheme.no_ota=No OTA (2MB APP/2MB SPIFFS)
+yolo_uno.menu.PartitionScheme.no_ota.build.partitions=no_ota
+yolo_uno.menu.PartitionScheme.no_ota.upload.maximum_size=2097152
+yolo_uno.menu.PartitionScheme.noota_3g=No OTA (1MB APP/3MB SPIFFS)
+yolo_uno.menu.PartitionScheme.noota_3g.build.partitions=noota_3g
+yolo_uno.menu.PartitionScheme.noota_3g.upload.maximum_size=1048576
+yolo_uno.menu.PartitionScheme.noota_ffat=No OTA (2MB APP/2MB FATFS)
+yolo_uno.menu.PartitionScheme.noota_ffat.build.partitions=noota_ffat
+yolo_uno.menu.PartitionScheme.noota_ffat.upload.maximum_size=2097152
+yolo_uno.menu.PartitionScheme.noota_3gffat=No OTA (1MB APP/3MB FATFS)
+yolo_uno.menu.PartitionScheme.noota_3gffat.build.partitions=noota_3gffat
+yolo_uno.menu.PartitionScheme.noota_3gffat.upload.maximum_size=1048576
+yolo_uno.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
+yolo_uno.menu.PartitionScheme.huge_app.build.partitions=huge_app
+yolo_uno.menu.PartitionScheme.huge_app.upload.maximum_size=3145728
+yolo_uno.menu.PartitionScheme.min_spiffs=Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)
+yolo_uno.menu.PartitionScheme.min_spiffs.build.partitions=min_spiffs
+yolo_uno.menu.PartitionScheme.min_spiffs.upload.maximum_size=1966080
+yolo_uno.menu.PartitionScheme.fatflash=16M Flash (2MB APP/12.5MB FATFS)
+yolo_uno.menu.PartitionScheme.fatflash.build.partitions=ffat
+yolo_uno.menu.PartitionScheme.fatflash.upload.maximum_size=2097152
+yolo_uno.menu.PartitionScheme.app3M_fat9M_16MB=16M Flash (3MB APP/9.9MB FATFS)
+yolo_uno.menu.PartitionScheme.app3M_fat9M_16MB.build.partitions=app3M_fat9M_16MB
+yolo_uno.menu.PartitionScheme.app3M_fat9M_16MB.upload.maximum_size=3145728
+yolo_uno.menu.PartitionScheme.rainmaker=RainMaker 4MB
+yolo_uno.menu.PartitionScheme.rainmaker.build.partitions=rainmaker
+yolo_uno.menu.PartitionScheme.rainmaker.upload.maximum_size=1966080
+yolo_uno.menu.PartitionScheme.rainmaker_4MB=RainMaker 4MB No OTA
+yolo_uno.menu.PartitionScheme.rainmaker_4MB.build.partitions=rainmaker_4MB_no_ota
+yolo_uno.menu.PartitionScheme.rainmaker_4MB.upload.maximum_size=4038656
+yolo_uno.menu.PartitionScheme.rainmaker_8MB=RainMaker 8MB
+yolo_uno.menu.PartitionScheme.rainmaker_8MB.build.partitions=rainmaker_8MB
+yolo_uno.menu.PartitionScheme.rainmaker_8MB.upload.maximum_size=4116480
+yolo_uno.menu.PartitionScheme.app5M_fat24M_32MB=32M Flash (4.8MB APP/22MB FATFS)
+yolo_uno.menu.PartitionScheme.app5M_fat24M_32MB.build.partitions=large_fat_32MB
+yolo_uno.menu.PartitionScheme.app5M_fat24M_32MB.upload.maximum_size=4718592
+yolo_uno.menu.PartitionScheme.app5M_little24M_32MB=32M Flash (4.8MB APP/22MB LittleFS)
+yolo_uno.menu.PartitionScheme.app5M_little24M_32MB.build.partitions=large_littlefs_32MB
+yolo_uno.menu.PartitionScheme.app5M_little24M_32MB.upload.maximum_size=4718592
+yolo_uno.menu.PartitionScheme.esp_sr_16=ESP SR 16M (3MB APP/7MB SPIFFS/2.9MB MODEL)
+yolo_uno.menu.PartitionScheme.esp_sr_16.upload.maximum_size=3145728
+yolo_uno.menu.PartitionScheme.esp_sr_16.upload.extra_flags=0xD10000 {build.path}/srmodels.bin
+yolo_uno.menu.PartitionScheme.esp_sr_16.build.partitions=esp_sr_16
+yolo_uno.menu.PartitionScheme.zigbee_zczr=Zigbee ZCZR 4MB with spiffs
+yolo_uno.menu.PartitionScheme.zigbee_zczr.build.partitions=zigbee_zczr
+yolo_uno.menu.PartitionScheme.zigbee_zczr.upload.maximum_size=1310720
+yolo_uno.menu.PartitionScheme.custom=Custom
+yolo_uno.menu.PartitionScheme.custom.build.partitions=
+yolo_uno.menu.PartitionScheme.custom.upload.maximum_size=16777216
+
+yolo_uno.menu.CPUFreq.240=240MHz (WiFi)
+yolo_uno.menu.CPUFreq.240.build.f_cpu=240000000L
+yolo_uno.menu.CPUFreq.160=160MHz (WiFi)
+yolo_uno.menu.CPUFreq.160.build.f_cpu=160000000L
+yolo_uno.menu.CPUFreq.80=80MHz (WiFi)
+yolo_uno.menu.CPUFreq.80.build.f_cpu=80000000L
+yolo_uno.menu.CPUFreq.40=40MHz
+yolo_uno.menu.CPUFreq.40.build.f_cpu=40000000L
+yolo_uno.menu.CPUFreq.20=20MHz
+yolo_uno.menu.CPUFreq.20.build.f_cpu=20000000L
+yolo_uno.menu.CPUFreq.10=10MHz
+yolo_uno.menu.CPUFreq.10.build.f_cpu=10000000L
+
+yolo_uno.menu.UploadSpeed.921600=921600
+yolo_uno.menu.UploadSpeed.921600.upload.speed=921600
+yolo_uno.menu.UploadSpeed.115200=115200
+yolo_uno.menu.UploadSpeed.115200.upload.speed=115200
+yolo_uno.menu.UploadSpeed.256000.windows=256000
+yolo_uno.menu.UploadSpeed.256000.upload.speed=256000
+yolo_uno.menu.UploadSpeed.230400.windows.upload.speed=256000
+yolo_uno.menu.UploadSpeed.230400=230400
+yolo_uno.menu.UploadSpeed.230400.upload.speed=230400
+yolo_uno.menu.UploadSpeed.460800.linux=460800
+yolo_uno.menu.UploadSpeed.460800.macosx=460800
+yolo_uno.menu.UploadSpeed.460800.upload.speed=460800
+yolo_uno.menu.UploadSpeed.512000.windows=512000
+yolo_uno.menu.UploadSpeed.512000.upload.speed=512000
+
+yolo_uno.menu.DebugLevel.none=None
+yolo_uno.menu.DebugLevel.none.build.code_debug=0
+yolo_uno.menu.DebugLevel.error=Error
+yolo_uno.menu.DebugLevel.error.build.code_debug=1
+yolo_uno.menu.DebugLevel.warn=Warn
+yolo_uno.menu.DebugLevel.warn.build.code_debug=2
+yolo_uno.menu.DebugLevel.info=Info
+yolo_uno.menu.DebugLevel.info.build.code_debug=3
+yolo_uno.menu.DebugLevel.debug=Debug
+yolo_uno.menu.DebugLevel.debug.build.code_debug=4
+yolo_uno.menu.DebugLevel.verbose=Verbose
+yolo_uno.menu.DebugLevel.verbose.build.code_debug=5
+
+yolo_uno.menu.EraseFlash.none=Disabled
+yolo_uno.menu.EraseFlash.none.upload.erase_cmd=
+yolo_uno.menu.EraseFlash.all=Enabled
+yolo_uno.menu.EraseFlash.all.upload.erase_cmd=-e
+
+yolo_uno.menu.ZigbeeMode.default=Disabled
+yolo_uno.menu.ZigbeeMode.default.build.zigbee_mode=
+yolo_uno.menu.ZigbeeMode.default.build.zigbee_libs=
+yolo_uno.menu.ZigbeeMode.zczr=Zigbee ZCZR (coordinator)
+yolo_uno.menu.ZigbeeMode.zczr.build.zigbee_mode=-DZIGBEE_MODE_ZCZR
+yolo_uno.menu.ZigbeeMode.zczr.build.zigbee_libs=-lesp_zb_api_zczr -lesp_zb_cli_command -lzboss_stack.zczr -lzboss_port
+
+##############################################################
+
+yolobit.name=YoloBit
+
+yolobit.bootloader.tool=esptool_py
+yolobit.bootloader.tool.default=esptool_py
+
+yolobit.upload.tool=esptool_py
+yolobit.upload.tool.default=esptool_py
+yolobit.upload.tool.network=esp_ota
+
+yolobit.upload.maximum_size=1310720
+yolobit.upload.maximum_data_size=327680
+yolobit.upload.flags=
+yolobit.upload.extra_flags=
+
+yolobit.serial.disableDTR=true
+yolobit.serial.disableRTS=true
+
+yolobit.build.tarch=xtensa
+yolobit.build.bootloader_addr=0x1000
+yolobit.build.target=esp32
+yolobit.build.mcu=esp32
+yolobit.build.core=esp32
+yolobit.build.variant=esp32
+yolobit.build.board=ESP32_DEV
+
+yolobit.build.f_cpu=240000000L
+yolobit.build.flash_size=4MB
+yolobit.build.flash_freq=40m
+yolobit.build.flash_mode=dio
+yolobit.build.boot=dio
+yolobit.build.partitions=default
+yolobit.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-issue -mfix-esp32-psram-cache-strategy=memw
+yolobit.build.extra_libs=
+
+yolobit.menu.PartitionScheme.default=Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
+yolobit.menu.PartitionScheme.default.build.partitions=default
+yolobit.menu.PartitionScheme.defaultffat=Default 4MB with ffat (1.2MB APP/1.5MB FATFS)
+yolobit.menu.PartitionScheme.defaultffat.build.partitions=default_ffat
+yolobit.menu.PartitionScheme.default_8MB=8M with spiffs (3MB APP/1.5MB SPIFFS)
+yolobit.menu.PartitionScheme.default_8MB.build.partitions=default_8MB
+yolobit.menu.PartitionScheme.default_8MB.upload.maximum_size=3342336
+yolobit.menu.PartitionScheme.minimal=Minimal (1.3MB APP/700KB SPIFFS)
+yolobit.menu.PartitionScheme.minimal.build.partitions=minimal
+yolobit.menu.PartitionScheme.no_ota=No OTA (2MB APP/2MB SPIFFS)
+yolobit.menu.PartitionScheme.no_ota.build.partitions=no_ota
+yolobit.menu.PartitionScheme.no_ota.upload.maximum_size=2097152
+yolobit.menu.PartitionScheme.noota_3g=No OTA (1MB APP/3MB SPIFFS)
+yolobit.menu.PartitionScheme.noota_3g.build.partitions=noota_3g
+yolobit.menu.PartitionScheme.noota_3g.upload.maximum_size=1048576
+yolobit.menu.PartitionScheme.noota_ffat=No OTA (2MB APP/2MB FATFS)
+yolobit.menu.PartitionScheme.noota_ffat.build.partitions=noota_ffat
+yolobit.menu.PartitionScheme.noota_ffat.upload.maximum_size=2097152
+yolobit.menu.PartitionScheme.noota_3gffat=No OTA (1MB APP/3MB FATFS)
+yolobit.menu.PartitionScheme.noota_3gffat.build.partitions=noota_3gffat
+yolobit.menu.PartitionScheme.noota_3gffat.upload.maximum_size=1048576
+yolobit.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
+yolobit.menu.PartitionScheme.huge_app.build.partitions=huge_app
+yolobit.menu.PartitionScheme.huge_app.upload.maximum_size=3145728
+yolobit.menu.PartitionScheme.min_spiffs=Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)
+yolobit.menu.PartitionScheme.min_spiffs.build.partitions=min_spiffs
+yolobit.menu.PartitionScheme.min_spiffs.upload.maximum_size=1966080
+yolobit.menu.PartitionScheme.fatflash=16M Flash (2MB APP/12.5MB FATFS)
+yolobit.menu.PartitionScheme.fatflash.build.partitions=ffat
+yolobit.menu.PartitionScheme.fatflash.upload.maximum_size=2097152
+yolobit.menu.PartitionScheme.rainmaker=RainMaker 4MB
+yolobit.menu.PartitionScheme.rainmaker.build.partitions=rainmaker
+yolobit.menu.PartitionScheme.rainmaker.upload.maximum_size=1966080
+yolobit.menu.PartitionScheme.rainmaker_4MB=RainMaker 4MB No OTA
+yolobit.menu.PartitionScheme.rainmaker_4MB.build.partitions=rainmaker_4MB_no_ota
+yolobit.menu.PartitionScheme.rainmaker_4MB.upload.maximum_size=4038656
+yolobit.menu.PartitionScheme.custom=Custom
+yolobit.menu.PartitionScheme.custom.build.partitions=
+yolobit.menu.PartitionScheme.custom.upload.maximum_size=16777216
+
+yolobit.menu.FlashMode.qio=QIO
+yolobit.menu.FlashMode.qio.build.flash_mode=dio
+yolobit.menu.FlashMode.qio.build.boot=qio
+yolobit.menu.FlashMode.dio=DIO
+yolobit.menu.FlashMode.dio.build.flash_mode=dio
+yolobit.menu.FlashMode.dio.build.boot=dio
+
+yolobit.menu.FlashFreq.80=80MHz
+yolobit.menu.FlashFreq.80.build.flash_freq=80m
+yolobit.menu.FlashFreq.40=40MHz
+yolobit.menu.FlashFreq.40.build.flash_freq=40m
+
+yolobit.menu.UploadSpeed.921600=921600
+yolobit.menu.UploadSpeed.921600.upload.speed=921600
+yolobit.menu.UploadSpeed.115200=115200
+yolobit.menu.UploadSpeed.115200.upload.speed=115200
+yolobit.menu.UploadSpeed.256000.windows=256000
+yolobit.menu.UploadSpeed.256000.upload.speed=256000
+yolobit.menu.UploadSpeed.230400.windows.upload.speed=256000
+yolobit.menu.UploadSpeed.230400=230400
+yolobit.menu.UploadSpeed.230400.upload.speed=230400
+yolobit.menu.UploadSpeed.460800.linux=460800
+yolobit.menu.UploadSpeed.460800.macosx=460800
+yolobit.menu.UploadSpeed.460800.upload.speed=460800
+yolobit.menu.UploadSpeed.512000.windows=512000
+yolobit.menu.UploadSpeed.512000.upload.speed=512000
+
+yolobit.menu.DebugLevel.none=None
+yolobit.menu.DebugLevel.none.build.code_debug=0
+yolobit.menu.DebugLevel.error=Error
+yolobit.menu.DebugLevel.error.build.code_debug=1
+yolobit.menu.DebugLevel.warn=Warn
+yolobit.menu.DebugLevel.warn.build.code_debug=2
+yolobit.menu.DebugLevel.info=Info
+yolobit.menu.DebugLevel.info.build.code_debug=3
+yolobit.menu.DebugLevel.debug=Debug
+yolobit.menu.DebugLevel.debug.build.code_debug=4
+yolobit.menu.DebugLevel.verbose=Verbose
+yolobit.menu.DebugLevel.verbose.build.code_debug=5
+
+yolobit.menu.EraseFlash.none=Disabled
+yolobit.menu.EraseFlash.none.upload.erase_cmd=
+yolobit.menu.EraseFlash.all=Enabled
+yolobit.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+xcontroller.name=xController
+
+xcontroller.bootloader.tool=esptool_py
+xcontroller.bootloader.tool.default=esptool_py
+
+xcontroller.upload.tool=esptool_py
+xcontroller.upload.tool.default=esptool_py
+xcontroller.upload.tool.network=esp_ota
+
+xcontroller.upload.maximum_size=1310720
+xcontroller.upload.maximum_data_size=327680
+xcontroller.upload.flags=
+xcontroller.upload.extra_flags=
+
+xcontroller.serial.disableDTR=true
+xcontroller.serial.disableRTS=true
+
+xcontroller.build.tarch=xtensa
+xcontroller.build.bootloader_addr=0x1000
+xcontroller.build.target=esp32
+xcontroller.build.mcu=esp32
+xcontroller.build.core=esp32
+xcontroller.build.variant=esp32
+xcontroller.build.board=ESP32_DEV
+
+xcontroller.build.f_cpu=240000000L
+xcontroller.build.flash_size=4MB
+xcontroller.build.flash_freq=40m
+xcontroller.build.flash_mode=dio
+xcontroller.build.boot=dio
+xcontroller.build.partitions=default
+xcontroller.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-issue -mfix-esp32-psram-cache-strategy=memw
+xcontroller.build.extra_libs=
+
+xcontroller.menu.PartitionScheme.default=Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
+xcontroller.menu.PartitionScheme.default.build.partitions=default
+xcontroller.menu.PartitionScheme.defaultffat=Default 4MB with ffat (1.2MB APP/1.5MB FATFS)
+xcontroller.menu.PartitionScheme.defaultffat.build.partitions=default_ffat
+xcontroller.menu.PartitionScheme.default_8MB=8M with spiffs (3MB APP/1.5MB SPIFFS)
+xcontroller.menu.PartitionScheme.default_8MB.build.partitions=default_8MB
+xcontroller.menu.PartitionScheme.default_8MB.upload.maximum_size=3342336
+xcontroller.menu.PartitionScheme.minimal=Minimal (1.3MB APP/700KB SPIFFS)
+xcontroller.menu.PartitionScheme.minimal.build.partitions=minimal
+xcontroller.menu.PartitionScheme.no_ota=No OTA (2MB APP/2MB SPIFFS)
+xcontroller.menu.PartitionScheme.no_ota.build.partitions=no_ota
+xcontroller.menu.PartitionScheme.no_ota.upload.maximum_size=2097152
+xcontroller.menu.PartitionScheme.noota_3g=No OTA (1MB APP/3MB SPIFFS)
+xcontroller.menu.PartitionScheme.noota_3g.build.partitions=noota_3g
+xcontroller.menu.PartitionScheme.noota_3g.upload.maximum_size=1048576
+xcontroller.menu.PartitionScheme.noota_ffat=No OTA (2MB APP/2MB FATFS)
+xcontroller.menu.PartitionScheme.noota_ffat.build.partitions=noota_ffat
+xcontroller.menu.PartitionScheme.noota_ffat.upload.maximum_size=2097152
+xcontroller.menu.PartitionScheme.noota_3gffat=No OTA (1MB APP/3MB FATFS)
+xcontroller.menu.PartitionScheme.noota_3gffat.build.partitions=noota_3gffat
+xcontroller.menu.PartitionScheme.noota_3gffat.upload.maximum_size=1048576
+xcontroller.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
+xcontroller.menu.PartitionScheme.huge_app.build.partitions=huge_app
+xcontroller.menu.PartitionScheme.huge_app.upload.maximum_size=3145728
+xcontroller.menu.PartitionScheme.min_spiffs=Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)
+xcontroller.menu.PartitionScheme.min_spiffs.build.partitions=min_spiffs
+xcontroller.menu.PartitionScheme.min_spiffs.upload.maximum_size=1966080
+xcontroller.menu.PartitionScheme.fatflash=16M Flash (2MB APP/12.5MB FATFS)
+xcontroller.menu.PartitionScheme.fatflash.build.partitions=ffat
+xcontroller.menu.PartitionScheme.fatflash.upload.maximum_size=2097152
+xcontroller.menu.PartitionScheme.rainmaker=RainMaker 4MB
+xcontroller.menu.PartitionScheme.rainmaker.build.partitions=rainmaker
+xcontroller.menu.PartitionScheme.rainmaker.upload.maximum_size=1966080
+xcontroller.menu.PartitionScheme.rainmaker_4MB=RainMaker 4MB No OTA
+xcontroller.menu.PartitionScheme.rainmaker_4MB.build.partitions=rainmaker_4MB_no_ota
+xcontroller.menu.PartitionScheme.rainmaker_4MB.upload.maximum_size=4038656
+xcontroller.menu.PartitionScheme.custom=Custom
+xcontroller.menu.PartitionScheme.custom.build.partitions=
+xcontroller.menu.PartitionScheme.custom.upload.maximum_size=16777216
+
+xcontroller.menu.FlashMode.qio=QIO
+xcontroller.menu.FlashMode.qio.build.flash_mode=dio
+xcontroller.menu.FlashMode.qio.build.boot=qio
+xcontroller.menu.FlashMode.dio=DIO
+xcontroller.menu.FlashMode.dio.build.flash_mode=dio
+xcontroller.menu.FlashMode.dio.build.boot=dio
+
+xcontroller.menu.FlashFreq.80=80MHz
+xcontroller.menu.FlashFreq.80.build.flash_freq=80m
+xcontroller.menu.FlashFreq.40=40MHz
+xcontroller.menu.FlashFreq.40.build.flash_freq=40m
+
+xcontroller.menu.UploadSpeed.921600=921600
+xcontroller.menu.UploadSpeed.921600.upload.speed=921600
+xcontroller.menu.UploadSpeed.115200=115200
+xcontroller.menu.UploadSpeed.115200.upload.speed=115200
+xcontroller.menu.UploadSpeed.256000.windows=256000
+xcontroller.menu.UploadSpeed.256000.upload.speed=256000
+xcontroller.menu.UploadSpeed.230400.windows.upload.speed=256000
+xcontroller.menu.UploadSpeed.230400=230400
+xcontroller.menu.UploadSpeed.230400.upload.speed=230400
+xcontroller.menu.UploadSpeed.460800.linux=460800
+xcontroller.menu.UploadSpeed.460800.macosx=460800
+xcontroller.menu.UploadSpeed.460800.upload.speed=460800
+xcontroller.menu.UploadSpeed.512000.windows=512000
+xcontroller.menu.UploadSpeed.512000.upload.speed=512000
+
+xcontroller.menu.DebugLevel.none=None
+xcontroller.menu.DebugLevel.none.build.code_debug=0
+xcontroller.menu.DebugLevel.error=Error
+xcontroller.menu.DebugLevel.error.build.code_debug=1
+xcontroller.menu.DebugLevel.warn=Warn
+xcontroller.menu.DebugLevel.warn.build.code_debug=2
+xcontroller.menu.DebugLevel.info=Info
+xcontroller.menu.DebugLevel.info.build.code_debug=3
+xcontroller.menu.DebugLevel.debug=Debug
+xcontroller.menu.DebugLevel.debug.build.code_debug=4
+xcontroller.menu.DebugLevel.verbose=Verbose
+xcontroller.menu.DebugLevel.verbose.build.code_debug=5
+
+xcontroller.menu.EraseFlash.none=Disabled
+xcontroller.menu.EraseFlash.none.upload.erase_cmd=
+xcontroller.menu.EraseFlash.all=Enabled
+xcontroller.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
