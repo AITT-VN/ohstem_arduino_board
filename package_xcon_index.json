@@ -12,6 +12,92 @@
             {
                "name":"OhStem Boards",
                "architecture":"esp32",
+               "version":"3.1.3",
+               "category":"ESP32",
+               "url":"https://github.com/AITT-VN/ohstem_arduino_board/releases/download/v3.1.3/ohstem_esp32-3.1.3.zip",
+               "archiveFileName":"ohstem_esp32-3.1.3.zip",
+               "checksum":"SHA-256:d1055fb30de51c4af58e483a0777c15f1b62a2e122c034462da9fc24d01b3fde",
+               "size":"20725317",
+               "help":{
+                  "online":"https://github.com/AITT-VN/ohstem_arduino_board"
+               },
+               "boards":[
+                  {
+                     "name":"Yolo UNO"
+                  },
+                  {
+                     "name":"YoloBit"
+                  },
+                  {
+                     "name":"xController"
+                  }
+               ],
+               "toolsDependencies":[
+                  {
+                     "packager": "esp32",
+                     "name": "esp32-arduino-libs",
+                     "version": "idf-release_v5.1-b6b4727c58"
+                   },
+                   {
+                     "packager": "esp32",
+                     "name": "esp-x32",
+                     "version": "2302"
+                   },
+                   {
+                     "packager": "esp32",
+                     "name": "esp-xs2",
+                     "version": "2302"
+                   },
+                   {
+                     "packager": "esp32",
+                     "name": "esp-xs3",
+                     "version": "2302"
+                   },
+                   {
+                     "packager": "esp32",
+                     "name": "xtensa-esp-elf-gdb",
+                     "version": "12.1_20231023"
+                   },
+                   {
+                     "packager": "esp32",
+                     "name": "esp-rv32",
+                     "version": "2302"
+                   },
+                   {
+                     "packager": "esp32",
+                     "name": "riscv32-esp-elf-gdb",
+                     "version": "12.1_20231023"
+                   },
+                   {
+                     "packager": "esp32",
+                     "name": "openocd-esp32",
+                     "version": "v0.12.0-esp32-20240318"
+                   },
+                   {
+                     "packager": "esp32",
+                     "name": "esptool_py",
+                     "version": "4.6"
+                   },
+                   {
+                     "packager": "esp32",
+                     "name": "mkspiffs",
+                     "version": "0.2.3"
+                   },
+                   {
+                     "packager": "esp32",
+                     "name": "mklittlefs",
+                     "version": "3.0.0-gnu12-dc7f933"
+                   },
+                   {
+                     "packager": "arduino",
+                     "name": "dfu-util",
+                     "version": "0.11.0-arduino5"
+                   }
+               ]
+            },
+            {
+               "name":"OhStem Boards",
+               "architecture":"esp32",
                "version":"3.0.4",
                "category":"ESP32",
                "url":"https://github.com/AITT-VN/ohstem_arduino_board/releases/download/v3.0.4/ohstem_esp32-3.0.4.zip",
