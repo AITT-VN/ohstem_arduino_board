@@ -160,10 +160,10 @@ yolo_uno.menu.USBMode.hwcdc.build.usb_mode=1
 yolo_uno.menu.USBMode.default=USB-OTG (TinyUSB)
 yolo_uno.menu.USBMode.default.build.usb_mode=0
 
-yolo_uno.menu.CDCOnBoot.default=Disabled
-yolo_uno.menu.CDCOnBoot.default.build.cdc_on_boot=0
-yolo_uno.menu.CDCOnBoot.cdc=Enabled
-yolo_uno.menu.CDCOnBoot.cdc.build.cdc_on_boot=1
+yolo_uno.menu.CDCOnBoot.default=Enabled
+yolo_uno.menu.CDCOnBoot.default.build.cdc_on_boot=1
+yolo_uno.menu.CDCOnBoot.cdc=Disabled
+yolo_uno.menu.CDCOnBoot.cdc.build.cdc_on_boot=0
 
 yolo_uno.menu.MSCOnBoot.default=Disabled
 yolo_uno.menu.MSCOnBoot.default.build.msc_on_boot=0

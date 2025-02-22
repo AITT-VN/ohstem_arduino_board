@@ -83,6 +83,9 @@ set(ARDUINO_ALL_LIBRARIES
   AsyncUDP
   BLE
   BluetoothSerial
+  Button2
+  coreiot-client-sdk
+  DHT20
   DNSServer
   EEPROM
   ESP_I2S
@@ -95,6 +98,7 @@ set(ARDUINO_ALL_LIBRARIES
   HTTPClient
   HTTPUpdate
   Insights
+  LiquidCrystal_I2C_UTF8
   LittleFS
   Matter
   NetBIOS
@@ -106,6 +110,7 @@ set(ARDUINO_ALL_LIBRARIES
   SD_MMC
   SD
   SimpleBLE
+  SimpleDHT
   SPIFFS
   SPI
   Ticker
